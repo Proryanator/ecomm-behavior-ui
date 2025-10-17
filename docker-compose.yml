@@ -1,0 +1,11 @@
+# runs the DB and API using the latest config
+include:
+  - https://gitlab.com/heb-engineering/teams/platform-engineering/quality-engineering/ecomm-behavior-api.git
+
+services:
+  ui:
+    build: .
+    profiles:
+      - ui
+    ports:
+      - "3000:3000"
